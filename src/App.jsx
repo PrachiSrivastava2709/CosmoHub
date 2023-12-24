@@ -1,5 +1,5 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import NavbarWrapper from './components/NavbarWrapper'
 import Home from './pages/Home';
 import SignUp from './pages/SignUp';
@@ -9,6 +9,8 @@ import Gallery from './pages/Gallery/Gallery';
 import Calendar from './pages/Calendar';
 import Notifications from './pages/Notifications';
 import Profile from './pages/Profile';
+import Landing from './pages/Landing';
+import GalleryItem from './pages/Gallery/GalleryItem';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,10 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        element: <Landing />
+      },
+      {
+        path: "/home",
         element: <Home />
       },
       {
@@ -34,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: "/gallery",
         element: <Gallery />
+      },
+      {
+        path: "/gallery/:id",
+        element: <GalleryItem />
       },
       {
         path: "/calendar",

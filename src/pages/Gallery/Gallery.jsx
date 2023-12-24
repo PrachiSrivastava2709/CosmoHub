@@ -9,6 +9,10 @@ export default function Gallery() {
 				image= {item.links[0].href}
 				date= {item.data[0].date_created}
 				title= {item.data[0].title}
+				id= {item.data[0].nasa_id}
+				keywords= {item.data[0].keywords}
+				center= {item.data[0].center}
+				desc= {item.data[0].description}
 			/>
 		)
 	}
