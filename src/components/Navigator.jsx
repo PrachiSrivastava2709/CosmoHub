@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Navigate() {
   return (
     <>
-        <Link to={"/"}>Home</Link>
+        <Link to={"/home"}>Home</Link>
         <br />
         <Link to={"/potd"}>Photo of the Day</Link>
         <br />
