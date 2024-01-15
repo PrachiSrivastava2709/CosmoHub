@@ -6,7 +6,7 @@ import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import PotD from './pages/PotD';
 import Gallery from './pages/Gallery/Gallery';
-import Calendar from './pages/Calendar';
+import Calendar from './pages/Calendar/Calendar';
 import Notifications from './pages/Notifications';
 import Profile from './pages/Profile';
 import Landing from './pages/Landing';

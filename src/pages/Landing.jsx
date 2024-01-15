@@ -6,6 +6,7 @@ export default function Landing() {
     <div>
         <Link to={"/signup"}>Sign Up</Link>
         <Link to={"/login"}>Log in</Link>
+        <br />
         Landing
     </div>
   )
