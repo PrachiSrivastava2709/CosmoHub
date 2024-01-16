@@ -9,9 +9,10 @@ export default function Gallery() {
 	const [data, setData] = useState(Data);
 
 
-	function createCard(item){
+	function createCard(item, index){
 		return (
 			<Card 
+				key= {index}
 				image= {item.links[0].href}
 				date= {item.data[0].date_created}
 				title= {item.data[0].title}
@@ -43,7 +44,7 @@ export default function Gallery() {
 			</div>
 			<br />
 			<div className="grid-container">
-				{data.items.map(createCard)}
+				{data.items.map((item, index) => {createCard(item, index)})}
 			</div>
 		</>
 

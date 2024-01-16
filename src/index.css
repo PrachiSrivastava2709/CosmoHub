@@ -1,3 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.gradient-bg{
+    @apply bg-gradient-to-br from-violet to-blue;
+}
 .border{
     border: 5px solid #000;
 }

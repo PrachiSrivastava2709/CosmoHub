@@ -4,9 +4,9 @@ import data from './data2024.js'
 
 
 export default function Calendar() {
-  function createEvent(item){
+  function createEvent(item, index){
     return <CalendarItem 
-        key= {item.key}
+        key= {index}
         date= {item.date}
         title= {item.title}
         detail= {item.detail}
@@ -17,7 +17,7 @@ export default function Calendar() {
     <>
       <h3>Astronomy Events - 2024</h3>
       <div>
-        {data.items.map(createEvent)}
+        {data.items.map((item, index) => createEvent(item, index))}
       </div>
     </>
   )

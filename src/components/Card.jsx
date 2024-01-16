@@ -6,7 +6,8 @@ export default function Card(props) {
   return (
     <>
       <Link to={`/gallery/:${props.id}`} 
-        state={{img: props.image, 
+        state={{
+                img: props.image, 
                 date: props.date,
                 keywords: props.keywords,
                 center: props.center,

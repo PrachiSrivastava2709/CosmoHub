@@ -15,57 +15,53 @@ import GalleryItem from './pages/Gallery/GalleryItem';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <NavbarWrapper />,
-    children: [
-      {
-        path: "/",
-        element: <Landing />
-      },
-      {
-        path: "/home",
-        element: <Home />
-      },
-      {
-        path: "/signup",
-        element: <SignUp />
-      },
-      {
-        path: "/login",
-        element: <Login />
-      },
-      {
-        path: "/potd",
-        element: <PotD />
-      },
-      {
-        path: "/gallery",
-        element: <Gallery />
-      },
-      {
-        path: "/gallery/:id",
-        element: <GalleryItem />
-      },
-      {
-        path: "/calendar",
-        element: <Calendar />
-      },
-      {
-        path: "/notifications",
-        element: <Notifications />
-      },
-      {
-        path: "/profile",
-        element: <Profile />
-      },
+    element: <Landing />,
+  },
+  {
+    path: "/home",
+    element: <><NavbarWrapper /> <Home /> </>
+  },
+  {
+    path: "/signup",
+    element: <SignUp />
+  },
+  {
+    path: "/login",
+    element: <Login />
+  },
+  {
+    path: "/potd",
+    element: <><NavbarWrapper /> <PotD /> </>
+  },
+  {
+    path: "/gallery",
+    element: <><NavbarWrapper /> <Gallery /> </>
+  },
+  {
+    path: "/gallery/:id",
+    element: <><NavbarWrapper /> <GalleryItem /> </>
+  },
+  {
+    path: "/calendar",
+    element: <><NavbarWrapper /> <Calendar /> </>
+  },
+  {
+    path: "/notifications",
+    element: <><NavbarWrapper /> <Notifications /> </>
+  },
+  {
+    path: "/profile",
+    element: <><NavbarWrapper /> <Profile /> </>
+  },
     ]
-  }
-
-])
+)
 
 function App() {
   return (
     <>
+      <div className='flex'>
       <RouterProvider router={router} />
+      </div>
     </>
   )
 }
