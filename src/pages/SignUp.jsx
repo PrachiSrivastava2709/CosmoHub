@@ -37,30 +37,36 @@ function SignUp() {
 
     return (
         <>
-            <form method="post" action="/home">
-                <h1>Sign Up here</h1>
-                <input
-                    type="email"
-                    placeholder="Enter your email here"
-                    value={state.email}
-                    onChange={(e) => { dispatch({ type: "emailChange", payload: e.target.value }) }} />
-                <input
-                    type="password"
-                    placeholder="Enter your password"
-                    value={state.tempPasswd}
-                    onChange={(e) => { dispatch({ type: "tempPasswdChange", payload: e.target.value }) }} />
-                <input
-                    type="password"
-                    placeholder="Confirm your password"
-                    value={state.conPasswd}
-                    onChange={(e) => { dispatch({ type: "conPasswdChange", payload: e.target.value }) }} />
+        <div className="bg-slate-600">
+            <div className="bg-slate-950">
+                <div className="gradient-bg text-white">
+                    <h1 className="font-headings">Sign Up here</h1>
+                    <p className="font-para">Please register with email and sign up to continue using our app</p>
+                </div> 
+                <SignUpGoogle />
+                <h1>OR</h1>
+                <form method="post" action="/home">
+                    <input
+                        type="email"
+                        placeholder="Enter your email here"
+                        value={state.email}
+                        onChange={(e) => { dispatch({ type: "emailChange", payload: e.target.value }) }} />
+                    <input
+                        type="password"
+                        placeholder="Enter your password"
+                        value={state.tempPasswd}
+                        onChange={(e) => { dispatch({ type: "tempPasswdChange", payload: e.target.value }) }} />
+                    <input
+                        type="password"
+                        placeholder="Confirm your password"
+                        value={state.conPasswd}
+                        onChange={(e) => { dispatch({ type: "conPasswdChange", payload: e.target.value }) }} />
 
-                <button type="submit" onClick={signUp}>Submit</button>
-            </form>
-
-            <h1>OR</h1>
-            <SignUpGoogle />
-            <p>{verifyMsg ? <Verify /> : ""}</p>
+                    <button type="submit" onClick={signUp}>Submit</button>
+                </form>
+                <p>{verifyMsg ? <Verify /> : ""}</p>
+            </div>
+        </div>
         </>
     )
 }

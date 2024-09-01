@@ -15,9 +15,11 @@ export default function Calendar() {
 
   return (
     <>
-      <h3>Astronomy Events - 2024</h3>
       <div>
-        {data.items.map((item, index) => createEvent(item, index))}
+        <h3>Astronomy Events - 2024</h3>
+        <div>
+          {data.items.map((item, index) => createEvent(item, index))}
+        </div>
       </div>
     </>
   )

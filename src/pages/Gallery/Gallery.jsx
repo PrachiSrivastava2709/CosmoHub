@@ -5,14 +5,12 @@ import Card from '../../components/Card.jsx';
 import axios from 'axios';
 
 export default function Gallery() {
-	const [query, setQuery] = useState("");
+	const [query, setQuery] = useState("supernova");
 	const [data, setData] = useState(Data);
 
-
-	function createCard(item, index){
+	function createCard(item){
 		return (
-			<Card 
-				key= {index}
+			<Card
 				image= {item.links[0].href}
 				date= {item.data[0].date_created}
 				title= {item.data[0].title}
@@ -39,14 +37,12 @@ export default function Gallery() {
 	return (
 		<>
 			<div>
-				<input type="text" placeholder='Search Astronomy' onChange={(e) => {setQuery(e.target.value)}}/>
+				<input type="text" placeholder={query} onChange={(e) => {setQuery(e.target.value)}}/>
 				<button onClick={(e) => {handleSubmit(e)}}>Search</button>
-			</div>
-			<br />
-			<div className="grid-container">
-				{data.items.map((item, index) => {createCard(item, index)})}
+				<div className="grid-container">
+					{data.items.map(createCard)}
+				</div>
 			</div>
 		</>
-
 	)
 }
